@@ -23,7 +23,7 @@ The coordinator creates and handles the operation of pools and jobs. The communi
  
 ### Custom signal handler
 
-A custom signal handler implemented using [sigaction](https://en.wikipedia.org/wiki/Sigaction), to catch and manage the [SIGTERM signal](https://en.wikipedia.org/wiki/Signal_(IPC)). It is highly recommended to use a custom signal handler, so there are no [zombie processes](https://en.wikipedia.org/wiki/Zombie_process) remaining after the shutdown of the application. If a pool receives a [SIGTERM signal](https://en.wikipedia.org/wiki/Signal_(IPC)), then redirects it to any active or suspended processes, waits for all of them to exit and then terminates his operation. All other signal are been ignored and the default operation takes place.
+A custom signal handler implemented using [sigaction](https://en.wikipedia.org/wiki/Sigaction), to catch and manage the [SIGTERM signal](https://en.wikipedia.org/wiki/Signal_(IPC)). It is highly recommended to use a custom signal handler, so there are no [zombie processes](https://en.wikipedia.org/wiki/Zombie_process) remaining after the shutdown of the application. If a pool receives a [SIGTERM signal](https://en.wikipedia.org/wiki/Signal_(IPC)), then redirects it to any active or suspended processes, waits for all of them to exit and then terminates his operation. All other signals are ignored and the default operation takes place.
 
 
 

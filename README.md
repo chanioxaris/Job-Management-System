@@ -14,7 +14,7 @@ The below image describes the structure of the application.
 
 ### Console
 
-The console is the user interface and handles the communication him and the coordinator using two [named pipes](https://en.wikipedia.org/wiki/Named_pipe). Also prints the results of operation submitted from user, to inform about the status of pools and jobs.
+The console is the user interface and handles the communication him and the coordinator using a pair of two [named pipes](https://en.wikipedia.org/wiki/Named_pipe). Also prints the results of operation submitted from user, to inform about the status of pools and jobs.
 
 ### Coord
 

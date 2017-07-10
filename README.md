@@ -14,9 +14,17 @@ The below image describes the structure of the application.
 
 ### Console
 
+The console is the user interface and handles the communication him and the coordinator using two [named pipes](https://en.wikipedia.org/wiki/Named_pipe). Also prints the results of operation submitted from user, to inform about the status of pools and jobs.
+
 ### Coord
+
+The coordinator creates and handles the operation of pools and jobs. The communication with pools, are been established using a pair of [named pipes](https://en.wikipedia.org/wiki/Named_pipe) for each pool process. Pools are created dynamically, so it can handle any number of submitted jobs.
+
  
 ### Custom signal handler
+
+A custom signal handler implemented using [sigaction](https://en.wikipedia.org/wiki/Sigaction), to catch and manage the [SIGTERM signal](https://en.wikipedia.org/wiki/Signal_(IPC)). It is highly recommended to use a custom signal handler, so there are no [zombie processes](https://en.wikipedia.org/wiki/Zombie_process) remaining after the shutdown of the application. If a pool receives a SIGTERM, then redirects the signal to any active or suspended processes, waits for all of them to exit and then terminates his operation. All other signal are been ignored and the default operation takes place.
+
 
 
 ## Interface description

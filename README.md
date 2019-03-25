@@ -8,7 +8,7 @@ Each job redirects his standard output and standard error to two different files
 The below image describes the structure of the application.
 <br />
 
-![Jms](https://github.com/chanioxaris/Job-Management-System/blob/master/img/jms.png)
+![Jms](https://github.com/chanioxaris/job-manager/blob/master/img/jms.png)
 
 
 
